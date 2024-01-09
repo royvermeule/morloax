@@ -9,7 +9,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class Init extends Command
 {
     private const commandName = 'morloax:init';
-    private string $rootDir = __DIR__ . '/../../../';
+    private string $rootDir = __DIR__ . '/../../../../';
     private string $initDir = __DIR__ . '/utility/shells/init/';
 
     public function configure()
