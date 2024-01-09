@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <?php require_once BASE_PATH . '/app/views/sections/head.php' ?>
+</head>
+
+<body>
+
+</body>
+</html>

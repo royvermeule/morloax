@@ -1,0 +1,26 @@
+<?php declare(strict_types= 1);
+
+use Morloax\Framework\Http\Kernel;
+use Morloax\Framework\Http\Request;
+use Morloax\Framework\Session;
+
+define('BASE_PATH', dirname(__DIR__));
+
+require_once BASE_PATH ."/vendor/autoload.php";
+require_once BASE_PATH .'/app/settings.php';
+
+$session = new Session();
+$session->start();
+
+$request = Request::createFromGlobals();
+
+$kernel = new Kernel();
+$kernel->addMiddleware(new \Morloax\Framework\Middleware\Csrf());
+$kernel->addMiddleware(new \Morloax\Framework\Middleware\Session());
+$kernel->addMiddleware(new \Morloax\Framework\Middleware\CheckAdmin());
+$kernel->addMiddleware(new \Morloax\Framework\Middleware\RouteExists());
+
+$response = $kernel->handle($request);
+
+$response->send();
+

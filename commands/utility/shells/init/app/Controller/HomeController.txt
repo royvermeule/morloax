@@ -1,0 +1,19 @@
+<?php
+
+declare(strict_types= 1);
+
+namespace App\Controller;
+use Morloax\Framework\Http\Controller;
+use Morloax\Framework\Http\Response;
+
+class HomeController extends Controller
+{
+    public function index(): Response
+    {
+        $data = [
+            'title' => 'Home'
+        ];
+
+        return self::view('index', $data);
+    }
+}
