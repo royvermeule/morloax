@@ -1,6 +1,6 @@
 {
-    "name": "wombat/filterphp",
-    "description": "This is a element filter for php. It adds new elements to the existing html",
+    "name": "royvermeulen/morloax",
+    "description": "This is a simple php mvc framework.",
     "type": "library",
     "license": "MIT",
     "autoload": {
