@@ -24,11 +24,6 @@ class Init extends Command
         $this->initMiddleware();
         $this->initRoutes();
 
-        if (file_exists(__DIR__ . '/utility/shells/init/htaccess.txt')) {
-            $output->writeln('hello');
-        }
-
-
         return Command::SUCCESS;
     }
 
@@ -57,6 +52,7 @@ class Init extends Command
         $this->createFile('app/View/index.txt', 'app/View/index.php');
         $this->createFile('app/View/sections/head.txt', 'app/View/sections/head.php');
         $this->createFile('app/htaccess.txt', 'app/.htaccess');
+        $this->createFile('app/settings.dist.txt', 'app/settings.dis.php');
     }
 
     public function initMiddleware(): void

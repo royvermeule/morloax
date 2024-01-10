@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Morloax\Framework\Middleware;
+namespace Middleware;
 
 use Morloax\Framework\Http\Response;
 
