@@ -18,7 +18,7 @@ class GenerateSettings extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $distSettingsDir = __DIR__ . '/../../../../app/settings.dist.php';
+        $distSettingsDir = __DIR__ . '/../../../../app/settings.dis.php';
         $localSettingsDir = __DIR__ . '/../../../../app/settings.php';
 
         if (!file_exists($distSettingsDir)) {
