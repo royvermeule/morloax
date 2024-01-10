@@ -10,11 +10,17 @@ Morloax Framework is a simple MVC framework for PHP, designed to streamline the 
    Create an empty project and add a `composer.json` file to it. Add the following code to your `composer.json` file:
 
     ```json
-    {
-      "require": {
-        "royvermeulen/morloax": "^0.5.6"
-      }
-    }
+   {
+      "autoload": {
+         "psr-4": {
+            "App\\": "app/",
+            "Middleware\\": "middleware/"
+            }
+        },
+       "require": {
+       "royvermeulen/morloax": "^0.5.6"
+       }
+   }
     ```
 
    Run the following command in your terminal to install Morlaux Framework:
@@ -37,23 +43,6 @@ Morloax Framework is a simple MVC framework for PHP, designed to streamline the 
 
     ```bash
     vendor/bin/morloax generate:settings
-    ```
-
-4. **Update composer.json**
-    
-    Your composer.json should look like this:
-   ```json
-   {
-      "autoload": {
-         "psr-4": {
-            "App\\": "app/",
-            "Middleware\\": "middleware/"
-            }
-        },
-       "require": {
-       "royvermeulen/morloax": "^0.5.6"
-       }
-   }
     ```
    Now run this command:
    ```bash 
