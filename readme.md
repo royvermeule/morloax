@@ -18,7 +18,7 @@ Morloax Framework is a simple MVC framework for PHP, designed to streamline the 
             }
         },
        "require": {
-       "royvermeulen/morloax": "^0.5.6"
+       "royvermeulen/morloax": "*"
        }
    }
     ```

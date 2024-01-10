@@ -1,0 +1,10 @@
+<?php
+
+namespace App\Model;
+
+use Morloax\Framework\Database\Database;
+
+class --name-- extends Database
+{
+
+}
