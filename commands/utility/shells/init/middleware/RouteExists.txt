@@ -4,7 +4,6 @@ namespace Middleware;
 
 use Morloax\Framework\Http\Request;
 use Morloax\Framework\Http\Response;
-use Morloax\Framework\Middleware\Middleware;
 
 class RouteExists implements Middleware
 {

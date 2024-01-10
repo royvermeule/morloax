@@ -19,12 +19,12 @@ class Controller
     {
         $session = new Session();
 
-        if (!file_exists(BASE_PATH . "/app/views/{$path}.php")) {
+        if (!file_exists(BASE_PATH . "/app/View/{$path}.php")) {
             die("The view: $path cannot be found.");
         }
 
         ob_start();
-        require_once BASE_PATH . "/app/views/{$path}.php";
+        require_once BASE_PATH . "/app/View/{$path}.php";
         $view = ob_get_clean();
 
         return new Response($view);

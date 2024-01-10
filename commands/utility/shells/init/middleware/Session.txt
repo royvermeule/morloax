@@ -3,7 +3,6 @@
 namespace Middleware;
 
 use Morloax\Framework\Http\Response;
-use Morloax\Framework\Middleware\Middleware;
 
 class Session implements Middleware
 {

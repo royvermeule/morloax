@@ -17,7 +17,6 @@ $request = Request::createFromGlobals();
 $kernel = new Kernel();
 $kernel->addMiddleware(new Middleware\Csrf());
 $kernel->addMiddleware(new Middleware\Session());
-$kernel->addMiddleware(new Middleware\CheckAdmin());
 $kernel->addMiddleware(new Middleware\RouteExists());
 
 $response = $kernel->handle($request);
