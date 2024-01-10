@@ -22,5 +22,8 @@
         "doctrine/dbal": "^3.7",
         "doctrine/migrations": "^3.7",
         "symfony/console": "^7.0"
-    }
+    },
+    "bin": [
+        "bin/morloax"
+    ]
 }

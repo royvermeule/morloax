@@ -28,7 +28,7 @@ Morloax Framework is a simple MVC framework for PHP, designed to streamline the 
    After installing Morlaux Framework, run the following command in your terminal:
 
     ```bash
-    php vendor/royvermeulen/morloax/console morloax:init
+    php vendor/bin/morloax init
     ```
 
 3. **Generate Settings**
@@ -36,7 +36,7 @@ Morloax Framework is a simple MVC framework for PHP, designed to streamline the 
    Generate the framework settings by running the following command:
 
     ```bash
-    php vendor/royvermeulen/morloax/console generate:settings
+    php vendor/bin/morloax generate:settings
     ```
 
 4. **Update composer.json**

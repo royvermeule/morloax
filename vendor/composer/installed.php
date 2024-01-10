@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'wombat/filterphp',
+        'name' => 'royvermeulen/morloax',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'aa2a2f5ea6fb223ba25cbe8047214ba7b9b8f26b',
+        'reference' => 'bd9b7c7254ce52749f7403fb802823fd8370e106',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -103,6 +103,15 @@
                 0 => '1.0|2.0|3.0',
             ),
         ),
+        'royvermeulen/morloax' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'bd9b7c7254ce52749f7403fb802823fd8370e106',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/console' => array(
             'pretty_version' => '7.1.x-dev',
             'version' => '7.1.9999999.9999999-dev',
@@ -183,15 +192,6 @@
             'reference' => '345c62fefe92243c3a06fc0cc65f2ec1a47e0764',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-exporter',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'wombat/filterphp' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => 'aa2a2f5ea6fb223ba25cbe8047214ba7b9b8f26b',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
