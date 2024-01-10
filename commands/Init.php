@@ -29,7 +29,7 @@ class Init extends Command
 
     public function initRoot(): void
     {
-        $this->createDirectory(__DIR__ . '/../../../../migrations');
+        $this->createDirectory('migrations');
 
         $this->createFile('htaccess.txt', '.htaccess');
         $this->createFile('migrations.txt', 'migrations.php');
@@ -38,18 +38,20 @@ class Init extends Command
 
     public function initPublic(): void
     {
-        $this->createDirectory(__DIR__ . '/../../../../public');
+        $this->createDirectory('public');
+
         $this->createFile('public/htaccess.txt', 'public/.htaccess');
         $this->createFile('public/index.txt', 'public/index.php');
     }
 
     public function initApp(): void
     {
-        $this->createDirectory(__DIR__ . '/../../../../app');
-        $this->createDirectory(__DIR__ . '/../../../../app/Controller');
-        $this->createDirectory(__DIR__ . '/../../../../app/View');
-        $this->createDirectory(__DIR__ . '/../../../../app/View/sections');
-        $this->createDirectory(__DIR__ . '/../../../../app/Model');
+        $this->createDirectory('app');
+        $this->createDirectory('app/Controller');
+        $this->createDirectory('app/View');
+        $this->createDirectory('app/View/sections');
+        $this->createDirectory('app/Model');
+
         $this->createFile('app/Controller/HomeController.txt', 'app/Controller/HomeController.php');
         $this->createFile('app/View/index.txt', 'app/View/index.php');
         $this->createFile('app/View/sections/head.txt', 'app/View/sections/head.php');
@@ -59,7 +61,8 @@ class Init extends Command
 
     public function initMiddleware(): void
     {
-        $this->createDirectory(__DIR__ . '/../../../../middleware');
+        $this->createDirectory('middleware');
+
         $middlewareDir = 'middleware';
         $this->createFile($middlewareDir . '/Middleware.txt', 'middleware/Middleware.php');
         $this->createFile($middlewareDir . '/Csrf.txt', 'middleware/Csrf.php');
@@ -69,15 +72,16 @@ class Init extends Command
 
     public function initRoutes(): void
     {
-        $this->createDirectory(__DIR__ . '/../../../../routes');
+        $this->createDirectory('routes');
         $this->createFile('routes/web.txt', 'routes/web.php');
     }
 
     private function createDirectory(string $directory): void
     {
-        if (!file_exists($directory)) {
-            if (!mkdir($directory, 0777, true) && !is_dir($directory)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $directory));
+        $path = __DIR__ . '/../../../../' . $directory;
+        if (!file_exists($path)) {
+            if (!mkdir($path, 0777, true) && !is_dir($path)) {
+                throw new \RuntimeException(sprintf('Directory "%s" was not created', $path));
             }
         }
     }
@@ -85,6 +89,18 @@ class Init extends Command
     private function createFile(string $source, string $destination): void
     {
         $content = file_get_contents(__DIR__ . '/utility/shells/init/' . $source);
-        file_put_contents(__DIR__ . '/../../../../' . $destination, $content);
+
+        if (!$this->exists($destination)) {
+            file_put_contents(__DIR__ . '/../../../../' . $destination, $content);
+        }
+    }
+
+    private function exists(string $pathToFile): bool
+    {
+        if (file_exists(__DIR__ . '/../../../../' . $pathToFile)) {
+            return true;
+        }
+
+        return false;
     }
 }
