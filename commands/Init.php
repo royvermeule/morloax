@@ -29,6 +29,8 @@ class Init extends Command
 
     public function initRoot(): void
     {
+        $this->createDirectory(__DIR__ . '/../../../../migrations');
+
         $this->createFile('htaccess.txt', '.htaccess');
         $this->createFile('migrations.txt', 'migrations.php');
         $this->createFile('migrations-db.txt', 'migrations-db.php');
