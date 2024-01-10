@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class Init extends Command
 {
-    private const commandName = 'morloax:init';
+    private const commandName = 'init';
 
     public function configure()
     {
