@@ -8,6 +8,7 @@ $app = new Application();
 $app->add(new Commands\GenerateSettings());
 $app->add(new Commands\Init());
 $app->add(new Commands\GenerateModel());
+$app->add(new Commands\GenerateController());
 try {
   $app->run();
 } catch (Exception $e) {

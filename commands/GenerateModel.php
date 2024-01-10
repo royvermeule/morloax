@@ -32,7 +32,7 @@ class GenerateModel extends Command
         $modelShell = file_get_contents(__DIR__ . '/utility/shells/model.txt');
         $model = str_replace('--name--', $modelName, $modelShell);
 
-        file_put_contents($modelDir . $modelName, $model);
+        file_put_contents($modelDir . $modelName . '.php', $model);
 
         return Command::SUCCESS;
     }

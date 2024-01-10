@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types= 1);
+
+namespace App\Controller;
+use Morloax\Framework\Http\Controller;
+use Morloax\Framework\Http\Response;
+
+class --name-- extends Controller
+{
+    public function index(): Response
+    {
+
+    }
+}
