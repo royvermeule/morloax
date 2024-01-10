@@ -15,10 +15,10 @@ $session->start();
 $request = Request::createFromGlobals();
 
 $kernel = new Kernel();
-$kernel->addMiddleware(new \Morloax\Framework\Middleware\Csrf());
-$kernel->addMiddleware(new \Morloax\Framework\Middleware\Session());
-$kernel->addMiddleware(new \Morloax\Framework\Middleware\CheckAdmin());
-$kernel->addMiddleware(new \Morloax\Framework\Middleware\RouteExists());
+$kernel->addMiddleware(new Middleware\Csrf());
+$kernel->addMiddleware(new Middleware\Session());
+$kernel->addMiddleware(new Middleware\CheckAdmin());
+$kernel->addMiddleware(new Middleware\RouteExists());
 
 $response = $kernel->handle($request);
 

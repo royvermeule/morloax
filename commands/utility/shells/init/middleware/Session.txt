@@ -1,6 +1,6 @@
 <?php
 
-namespace Morloax\Framework\Middleware;
+namespace Middleware;
 
 use Morloax\Framework\Http\Response;
 use Morloax\Framework\Middleware\Middleware;
