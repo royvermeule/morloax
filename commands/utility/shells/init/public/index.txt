@@ -15,9 +15,11 @@ $session->start();
 $request = Request::createFromGlobals();
 
 $kernel = new Kernel();
-$kernel->addMiddleware(new Middleware\Csrf());
-$kernel->addMiddleware(new Middleware\Session());
-$kernel->addMiddleware(new Middleware\RouteExists());
+$kernel->addMiddlewareToAll([
+    \Middleware\Csrf::class,
+    \Middleware\Session::class,
+    \Middleware\RouteExists::class
+]);
 
 $response = $kernel->handle($request);
 
